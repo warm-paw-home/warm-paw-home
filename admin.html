@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>暖爪之家 - 后台管理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="admin-container">
+
+    <!-- 左侧菜单 -->
+    <aside class="sidebar">
+        <h2>暖爪之家</h2>
+        <ul>
+            <li class="active">控制台</li>
+            <li>宠物管理</li>
+            <li>用户管理</li>
+            <li>领养审核</li>
+            <li>救助信息</li>
+            <li>数据统计</li>
+            <li>公告发布</li>
+        </ul>
+    </aside>
+
+    <!-- 右侧内容 -->
+    <div class="main-content">
+
+        <!-- 顶部栏 -->
+        <header class="admin-header">
+            <h3>后台管理系统</h3>
+            <div class="admin-user">管理员：admin</div>
+        </header>
+
+        <!-- 数据面板 -->
+        <section class="dashboard">
+            <div class="card">
+                <h3>128</h3>
+                <p>今日新增用户</p>
+            </div>
+            <div class="card">
+                <h3>56</h3>
+                <p>待审核申请</p>
+            </div>
+            <div class="card">
+                <h3>32</h3>
+                <p>新增救助信息</p>
+            </div>
+            <div class="card">
+                <h3>936</h3>
+                <p>累计领养成功</p>
+            </div>
+        </section>
+
+        <!-- 表格管理区 -->
+        <section class="table-section">
+            <h2>宠物信息管理</h2>
+        
+            <div class="pet-form">
+                <input type="text" id="petName" placeholder="宠物名称">
+                <input type="text" id="petType" placeholder="类型（猫/狗）">
+                <input type="text" id="petAge" placeholder="年龄">
+                <button class="add-btn" onclick="addPet()">+ 添加宠物</button>
+            </div>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>类型</th>
+                        <th>年龄</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+        
+                <tbody id="petTableBody">
+                    <tr>
+                        <td>奶糖</td>
+                        <td>猫</td>
+                        <td>2岁</td>
+                        <td>待领养</td>
+                        <td>
+                            <button onclick="deletePet(this)">删除</button>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>可乐</td>
+                        <td>狗</td>
+                        <td>1岁</td>
+                        <td>待领养</td>
+                        <td>
+                            <button onclick="deletePet(this)">删除</button>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>雪球</td>
+                        <td>猫</td>
+                        <td>3岁</td>
+                        <td>待领养</td>
+                        <td>
+                            <button onclick="deletePet(this)">删除</button>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>豆豆</td>
+                        <td>狗</td>
+                        <td>2岁</td>
+                        <td>待领养</td>
+                        <td>
+                            <button onclick="deletePet(this)">删除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="chart-section">
+            <h2>数据统计图表</h2>
+        
+            <div class="chart-box">
+                <div class="bar" style="height: 120px;">猫 2</div>
+                <div class="bar" style="height: 120px;">狗 2</div>
+                <div class="bar" style="height: 80px;">本周领养 1</div>
+                <div class="bar" style="height: 150px;">救助 3</div>
+            </div>
+        </section>
+        <section class="table-section">
+            <h2>领养申请审核</h2>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>宠物</th>
+                        <th>联系方式</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+        
+                <tbody id="applicationTable">
+                    <tr>
+                        <td>小林</td>
+                        <td>奶糖</td>
+                        <td>13800000000</td>
+                        <td>待审核</td>
+                        <td>
+                            <button onclick="approveApplication(this)">通过</button>
+                            <button class="danger" onclick="rejectApplication(this)">拒绝</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="table-section">
+            <h2>流浪救助信息管理</h2>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>发现地点</th>
+                        <th>情况描述</th>
+                        <th>联系方式</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+        
+                <tbody id="rescueTable">
+                    <tr>
+                        <td>学校东门</td>
+                        <td>发现一只橘猫，腿部受伤</td>
+                        <td>13800000000</td>
+                        <td>待处理</td>
+                        <td>
+                            <button onclick="handleRescue(this)">已处理</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

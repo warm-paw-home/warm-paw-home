@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暖爪之家</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">暖爪之家</div>
+            <ul class="nav-links">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">宠物领养</a></li>
+                <li><a href="#">流浪救助</a></li>
+                <li><a href="#">领养故事</a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>给每一个小生命一个温暖的家</h1>
+            <p>在这里，遇见属于你的陪伴，也为流浪的小生命点亮希望</p>
+            <button>立即领养</button>
+            <button>爱心救助</button>
+        </div>
+        <div class="banner-image">
+            <img src="images/banner-pet.png" alt="宠物">
+        </div>
+    </section>
+
+    <!-- 热门宠物 -->
+    <section class="pet-section">
+        <h2>热门待领养宠物</h2>
+        <div class="pet-cards">
+            <div class="pet-card">
+                <img src="images/cat1.jpg" alt="">
+                <h3>奶糖</h3>
+                <p>2岁 · 布偶猫</p>
+                <p>性格温顺 · 已接种疫苗</p>
+                <button onclick="window.location.href='apply.html'">申请领养</button>
+            </div>
+
+            <div class="pet-card">
+                <img src="images/dog1.jpg" alt="">
+                <h3>可乐</h3>
+                <p>1岁 · 金毛</p>
+                <p>活泼亲人 · 健康良好</p>
+                <button onclick="window.location.href='apply.html'">申请领养</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 流浪宠物救助 -->
+    <section class="rescue-section">
+        <h2>流浪宠物救助</h2>
+    
+        <div class="rescue-box">
+            <input type="text" id="rescueLocation" placeholder="发现地点">
+            <textarea id="rescueDesc" placeholder="请描述宠物情况"></textarea>
+            <input type="text" id="rescueContact" placeholder="联系方式">
+    
+            <button onclick="submitRescue()">提交救助信息</button>
+        </div>
+    </section>
+
+    <!-- 领养故事 -->
+    <section class="story-section">
+        <h2>真实领养故事</h2>
+        <div class="story-card">
+            <p>“从遇见奶糖的那天起，我的生活被治愈了。”</p>
+            <span>—— 用户小林</span>
+        </div>
+    </section>
+
+    <!-- 数据统计 -->
+    <section class="data-section">
+        <div class="data-box">
+            <h3>1286</h3>
+            <p>累计救助</p>
+        </div>
+        <div class="data-box">
+            <h3>936</h3>
+            <p>成功领养</p>
+        </div>
+        <div class="data-box">
+            <h3>205</h3>
+            <p>志愿者</p>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

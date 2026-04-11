@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #FFF8F0;
+    color: #5C4033;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFA94D;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5C4033;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    background: linear-gradient(135deg, #FFF8F0, #FFD6D6);
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.banner-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.banner button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #FFA94D;
+    color: white;
+    margin-right: 15px;
+}
+
+.banner-image img {
+    width: 450px;
+}
+
+.pet-section,
+.rescue-section,
+.story-section,
+.data-section {
+    padding: 60px;
+}
+
+.pet-cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.pet-card {
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.pet-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.pet-card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #FFA94D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.rescue-box input,
+.rescue-box textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.rescue-box button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: #FFA94D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.story-card {
+    margin-top: 20px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+}
+
+.data-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.data-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
+/* ===== 后台整体布局 ===== */
+.admin-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 左侧菜单 */
+.sidebar {
+    width: 220px;
+    background: #FFA94D;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* 右侧 */
+.main-content {
+    flex: 1;
+    background: #FFF8F0;
+}
+
+/* 顶部栏 */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: white;
+}
+
+/* 数据面板 */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 28px;
+    color: #FFA94D;
+}
+
+/* 表格 */
+.table-section {
+    padding: 30px;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    background: #FFA94D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background: #FFE5C2;
+}
+
+td button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #FFA94D;
+    color: white;
+}
+
+td .danger {
+    background: #FF6B6B;
+}
+.pet-card:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+/* ===== 登录页 ===== */
+.login-page {
+    display: flex;
+    height: 100vh;
+    background: #FFF8F0;
+}
+
+.left-panel {
+    width: 50%;
+    background: linear-gradient(135deg, #FFA94D, #FFB86C);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.left-panel h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.left-panel p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.left-panel img {
+    width: 80%;
+    max-width: 500px;
+}
+
+.right-panel {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 420px;
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(255,169,77,0.2);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5C4033;
+}
+
+.tab-switch {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tab-switch button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    background: #FFD6D6;
+}
+
+.tab-switch .active {
+    background: #FFA94D;
+    color: white;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #FFA94D;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.extra-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.extra-links a {
+    text-decoration: none;
+    color: #FFA94D;
+}
+/* 后台输入框 */
+.pet-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.pet-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* 图表 */
+.chart-section {
+    padding: 30px;
+}
+
+.chart-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    height: 200px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.bar {
+    width: 80px;
+    background: #FFA94D;
+    color: white;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    padding-top: 10px;
+}
+/* 领养申请页 */
+.apply-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FFF8F0;
+}
+
+.apply-box {
+    width: 500px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(255,169,77,0.15);
+}
+
+.apply-box h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5C4033;
+}
+
+.apply-box input,
+.apply-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.apply-box textarea {
+    height: 120px;
+    resize: none;
+}
